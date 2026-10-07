@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vélara Privacy Policy">
+<title>Vélara — Privacy Policy</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f5f7fb; --card: #fff; --text: #172033; --muted: #647084;
+  --accent: #5b5bd6; --accent-soft: #eef0ff; --border: #e3e7ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f1117; --card:#171a22; --text:#edf0f7; --muted:#aab2c2;
+    --accent:#9b9cff; --accent-soft:#242640; --border:#2b3040; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.7; }
+main { width:min(900px,calc(100% - 32px)); margin:48px auto; }
+header, section { background:var(--card); border:1px solid var(--border); border-radius:18px;
+  padding:28px 32px; margin-bottom:18px; box-shadow:0 6px 24px rgba(0,0,0,.04); }
+header { text-align:center; padding:42px 32px; }
+h1 { margin:0 0 6px; font-size:clamp(2rem,5vw,3rem); letter-spacing:-.04em; }
+h2 { margin-top:0; font-size:1.35rem; letter-spacing:-.02em; }
+p { margin:0 0 1em; }
+p:last-child { margin-bottom:0; }
+.meta { color:var(--muted); margin:.35rem 0; }
+.badge { display:inline-block; margin-top:18px; padding:8px 14px; border-radius:999px;
+  background:var(--accent-soft); color:var(--accent); font-weight:700; font-size:.9rem; }
+ul { padding-left:1.3rem; }
+li { margin:.8rem 0; }
+code { background:var(--accent-soft); color:var(--text); padding:2px 6px; border-radius:6px; font-size:.9em; }
+a { color:var(--accent); }
+footer { text-align:center; color:var(--muted); padding:10px 0 35px; font-size:.9rem; }
+@media (max-width:600px) {
+  main { width:min(100% - 20px,900px); margin:20px auto; }
+  header,section { padding:22px 20px; border-radius:14px; }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Privacy Policy</h1>
+  <div class="meta"><strong>Vélara</strong></div>
+  <div class="meta">Application ID: <code>com.besticando.velara</code></div>
+  <div class="meta">Effective Date: September 28, 2026 · Version: 3.1</div>
+  <div class="meta">Contact: <a href="mailto:b3st.i.can.do@gmail.com">b3st.i.can.do@gmail.com</a></div>
+  <div class="badge">100% OFFLINE &amp; ZERO DATA TRANSMISSION</div>
+</header>
+
+<section>
+<h2>Key Privacy Principle</h2>
+<p>Vélara operates entirely locally on your device without network connectivity. The application contains <strong>NO internet permissions</strong>, collects <strong>NO personal information</strong>, and never transmits your data to external servers or third parties.</p>
+</section>
+<section><h2>1. Introduction</h2><p>This Privacy Policy explains how Vélara (&quot;the Application&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), developed by the author of com.besticando.velara, handles your information when you use our lock screen and customization utility. We are deeply committed to safeguarding user privacy and transparency.</p>
+<p>By installing and using Vélara, you agree to the terms described in this policy. If you have any inquiries, you can reach us directly at b3st.i.can.do@gmail.com.</p></section>
+<section><h2>2. No Collection or Transmission of Personal Data</h2><p>Vélara is designed with a strict Privacy-by-Design and Zero-Telemetry philosophy:</p>
+<p>We do NOT collect, harvest, store, or transmit any Personally Identifiable Information (PII), such as your name, email address, phone number, physical location, IP address, device serial numbers, or advertising identifiers.</p>
+<p>The application&#x27;s manifest explicitly removes the android.permission.INTERNET and android.permission.ACCESS_NETWORK_STATE permissions, technically guaranteeing that the app cannot establish outbound network connections or communicate with external servers.</p></section>
+<section><h2>3. Device Permissions and On-Device Processing</h2><p>To provide core lock screen functionality, Vélara requests certain system permissions. All operations occur strictly locally on your device in volatile memory (RAM):</p><ul><li><strong>Notification Listener Service</strong> <code>BIND_NOTIFICATION_LISTENER_SERVICE</code> — Required solely to display notification app icons, titles, and message previews on the lock screen. Notification data is processed purely in temporary memory and is never logged, persisted, or exported.</li>
+<li><strong>Camera &amp; Flashlight</strong> <code>CAMERA &amp; android.hardware.camera.flash</code> — Used exclusively to toggle the lock screen flashlight shortcut and quickly open your device camera application via secure shortcut intents. The app does not record video, capture still images, or access your photo gallery.</li>
+<li><strong>Foreground Service</strong> <code>FOREGROUND_SERVICE &amp; SPECIAL_USE</code> — Maintains uninterrupted lock screen responsiveness and prevents the operating system from terminating the lock screen overlay unexpectedly.</li>
+<li><strong>Battery &amp; Power Status</strong> <code>Intent.ACTION_BATTERY_CHANGED</code> — Reads local battery metrics (level, charging speed, voltage, charging technology) solely to display real-time lock screen animations (e.g. Rapid Charging, Fast Charging, and Super Fast Charging modes).</li>
+<li><strong>System Alert Window &amp; Full-Screen Intent</strong> <code>SYSTEM_ALERT_WINDOW / USE_FULL_SCREEN_INTENT</code> — Allows the custom lock screen interface to be rendered over the system display when the device screen turns on or is woken.</li>
+<li><strong>Boot Completed</strong> <code>RECEIVE_BOOT_COMPLETED</code> — Allows the lock screen service to restore your configured custom lock screen automatically after device restart.</li>
+<li><strong>Vibration &amp; Haptics</strong> <code>VIBRATE</code> — Provides tactile feedback for unlock gestures, PIN entry, and interactive lock screen controls.</li>
+<li><strong>Set Wallpaper</strong> <code>SET_WALLPAPER</code> — Allows applying user-chosen wallpaper backgrounds directly within the lock screen styles menu.</li></ul></section>
+<section><h2>4. Local Data Storage and Retention</h2><p>All user preferences—such as your chosen clock design, lock screen theme, animation speeds, language options, and layout configurations—are stored exclusively within your device&#x27;s isolated local application sandbox (via Android SharedPreferences / Encrypted DataStore).</p>
+<p>We do not operate external databases, cloud synchronization servers, or remote backups. You retain complete control over this data: you may erase all stored settings at any time by clearing the application&#x27;s storage in Android Settings or by uninstalling the application.</p></section>
+<section><h2>5. Third-Party SDKs and Analytics</h2><p>Vélara contains NO third-party advertising SDKs, NO tracking frameworks, NO crash-reporting telemetry libraries, and NO behavioral analytics tools (such as Google Analytics, Firebase Analytics, or Facebook SDK).</p>
+<p>No information regarding your device usage, habits, or interactions is shared with or accessible to third-party advertising networks or data brokers.</p></section>
+<section><h2>6. Compliance with Regulations (GDPR &amp; CCPA / CalOPPA)</h2><p>Under the European Union General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA):</p>
+<p>Because Vélara does not collect, process, store, sell, or disclose personal data to remote servers or third parties, no user data profile exists to access, rectify, port, or erase. Your data sovereignty is absolute, as all operations remain confined to your personal hardware.</p></section>
+<section><h2>7. Children&#x27;s Privacy (COPPA)</h2><p>Vélara is safe for all audiences and complies with the Children&#x27;s Online Privacy Protection Act (COPPA). We do not knowingly collect, solicit, or maintain personal information from children under the age of 13.</p></section>
+<section><h2>8. Google Play Developer Policy Compliance</h2><p>This policy adheres fully to Google Play Developer Program Policies concerning User Data, Device and Network Abuse, and Permissions. All requested sensitive permissions are strictly necessary for the core functionalities of a personalized lock screen utility.</p></section>
+<section><h2>9. Changes to this Privacy Policy</h2><p>We may occasionally update this Privacy Policy to reflect application enhancements or regulatory changes. Any modifications will be indicated by an updated &quot;Effective Date&quot; at the top of the policy.</p>
+<p>Users are encouraged to review this policy periodically. Continued use of Vélara following the posting of revisions constitutes acceptance of those changes.</p></section>
+<section><h2>10. Contact Information</h2><p>If you have any questions, feedback, or concerns regarding this Privacy Policy or the security practices of Vélara, please contact us by email:</p>
+<p>Developer Contact Email: b3st.i.can.do@gmail.com
+Application Package: com.besticando.velara</p></section>
+<footer>Vélara (com.besticando.velara) — Privacy Policy</footer>
+</main>
+</body>
+</html>
